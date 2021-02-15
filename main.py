@@ -3,3 +3,36 @@
 # print(data)
 
 import pandas
+
+data = pandas.read_csv("weather_data.csv")
+print(data)
+print(data["temp"])
+
+print(data.to_dict())
+print(data["temp"].to_list())
+
+print(data["temp"].mean())
+print(data["temp"].max())
+
+print(data.temp.mean())
+print(data.temp.max())
+
+print(data[data.day == "Monday"])
+
+print(data[data.temp == data.temp.max()])
+
+print(data[data.day == "Monday"].condition)
+
+data_dict = {
+    "students": ["rob", "fab"],
+    "scores": [50, 60]
+}
+
+data = pandas.DataFrame(data_dict)
+print(data)
+data.to_csv("new_data.csv")
+
+
+
+
+
