@@ -4,7 +4,7 @@
 
 import pandas
 
-data = pandas.read_csv("weather_data.csv")
+data = pandas.read_csv("data/in/weather_data.csv")
 print(data)
 print(data["temp"])
 
@@ -30,7 +30,7 @@ data_dict = {
 
 data = pandas.DataFrame(data_dict)
 print(data)
-data.to_csv("new_data.csv")
+data.to_csv("data/out/new_data.csv")
 
 
 
